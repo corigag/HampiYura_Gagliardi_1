@@ -5,6 +5,7 @@
 	<meta charset=utf-8>
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
 	<div class="containerGridHome">
@@ -36,19 +37,19 @@
 		</div>
 	
 	<!--cuerpo Home-->
-		<div class="itemA">
+		<div class="itemA wow animate__animated animate__fadeInUp">
 			<img src="assets/agua.jpg" alt="imagen elemento agua" class="imgElemento">
 			<p class="textoSecciones">Aqui va un texto sobre los productos y las materias primas</p>
 		</div>
-		<div class="itemB">
+		<div class="itemB wow animate__animated animate__fadeInUp">
 			<img src="assets/tierra.jpg" alt="imagen elemento agua" class="imgElemento">
 			<p class="textoSecciones">Aqui va un texto sobre las plantas medicinales</p>
 		</div>
-		<div class="itemC">
+		<div class="itemC wow animate__animated animate__fadeInUp">
 			<img src="assets/aire.jpg" alt="imagen elemento agua" class="imgElemento">
 			<p class="textoSecciones">Aqui va un texto sobre el origen de Hampi</p>
 		</div>
-		<div class="itemD">
+		<div class="itemD wow animate__animated animate__fadeInUp">
 			<img src="assets/fuego.jpg" alt="imagen elemento agua" class="imgElemento">
 			<p class="textoSecciones">Aqui va un texto sobre como/para que contactarnos</p>
 		</div>
@@ -62,5 +63,10 @@
 			</ul>
 		</footer> 
 	</div>   
+
+	<script src="js/wow.js"></script>
+         <script>
+            new WOW().init();
+         </script>
 </body>
 </html>

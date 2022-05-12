@@ -20,17 +20,28 @@ body {
 .containerGridHome{
 	display: grid;
 	grid-template-rows: auto repeat(4,1fr) auto;
-	grid-row-gap: 1rem;
+	/*grid-row-gap: 1rem;*/
 }
 .header{
 	display: flex;
+	position: absolute;
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
 	background-color: #F0F8EA;
 	opacity: .8;
 	width: 100vw;
+	height: 100px;
+	transition:  all 250ms;
+	z-index: 100;
 }
+
+.header:hover{
+	height: 120px;
+	background-color: #D5E2BC;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,2);	
+}
+
 #logoMenu {
 	align-self: flex-start;
 	max-width: 10rem;
@@ -125,21 +136,38 @@ footer{
 
 /*home*/
 
+@keyframes zoom{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.1);
+	}
+}
+
 .itemsPortada{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding-top:  5rem;
+	padding-top:  130px;
 }
+
 .fotoPortada{
 	max-width: 40rem;
 	max-height: 60rem;
 	margin: 1.8rem 2rem;
 }
+
 .textoPortada{
 	font-size: 3rem;
 	align-self: center;
-	margin: 0 3rem 5rem 6rem;
+	margin: 0 3rem 9rem 6rem;
+	animation-name: zoom ;
+	animation-iteration-count: 1;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+	animation-delay: 0;
+	animation-fill-mode: forwards;
 }
 
 @media all and (max-width: 500px){
@@ -166,7 +194,14 @@ footer{
 	width: 20rem;
 	margin: 5em;
 	border-radius: 1em;
+	transition: all 250ms;
 }
+
+.imgElemento:hover{
+	transform: scale(1.1,1.1);
+	box-shadow: 0 0 5px 1px rgba(0,0,0,2);
+}
+
 .itemA{
 	display: flex;
 	width: 100vw;
@@ -267,6 +302,12 @@ footer{
 .txtPortadaOrg{
 	font-size: 3rem;
 	align-self: center;
+	animation-name: zoom ;
+	animation-iteration-count: 1;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+	animation-delay: 0;
+	animation-fill-mode: forwards;
 }	
 
 @media all and (max-width: 500px){
